@@ -1,9 +1,11 @@
 package game.enums;
 
+import game.interfaces.IGameObject;
+
 /**
  * Buildings
  */
-public enum EBuilding {
+public enum EBuilding implements IGameObject {
 
   NEXUS,
   PYLON, 

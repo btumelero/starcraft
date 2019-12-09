@@ -1,9 +1,11 @@
 package game.enums;
 
+import game.interfaces.IGameObject;
+
 /**
  * Unit
  */
-public enum EUnit {
+public enum EUnit implements IGameObject {
 
   ADEPT, 
   ARCHON, 

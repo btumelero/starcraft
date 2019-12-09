@@ -1,9 +1,11 @@
 package game.enums;
 
+import game.interfaces.ISpeed;
+
 /**
  * Speed
  */
-public enum ESpeed {
+public enum ESpeed implements ISpeed {
 
   ADEPT(3.5), 
   ARCHON(3.94),

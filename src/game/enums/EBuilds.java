@@ -2,10 +2,12 @@ package game.enums;
 
 import java.util.List;
 
+import game.interfaces.IBuilds;
+
 /**
  * Builds
  */
-public enum EBuilds {
+public enum EBuilds implements IBuilds {
 
   // Units
 

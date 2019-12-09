@@ -1,9 +1,11 @@
 package game.enums;
 
+import game.interfaces.IRange;
+
 /**
  * Range
  */
-public enum ERange {
+public enum ERange implements IRange {
 
   // Units
 
