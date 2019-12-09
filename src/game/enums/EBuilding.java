@@ -3,7 +3,7 @@ package game.enums;
 /**
  * Buildings
  */
-public enum Building {
+public enum EBuilding {
 
   NEXUS,
   PYLON, 

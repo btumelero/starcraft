@@ -3,7 +3,7 @@ package game.enums;
 /**
  * Unit
  */
-public enum Unit {
+public enum EUnit {
 
   ADEPT, 
   ARCHON, 

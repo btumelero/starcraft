@@ -1,9 +1,11 @@
 package game.enums;
 
+import game.interfaces.IAttack;
+
 /**
  * Attack
  */
-public enum Attack {
+public enum EAttack implements IAttack {
 
   //Units
 
@@ -64,14 +66,14 @@ public enum Attack {
     return numberOfAttacks;
   }
 
-  private Attack(int groundAttack, int airAttack) {
+  private EAttack(int groundAttack, int airAttack) {
     this.groundAttack = groundAttack;
     this.airAttack = airAttack;
   }
 
-  private Attack(int groundAttack, int airAttack, Integer numberOfAttacks) {
+  private EAttack(int groundAttack, int airAttack, Integer numberOfAttacks) {
     this(groundAttack, airAttack);
     this.numberOfAttacks = numberOfAttacks;
   }
-  
+
 }
