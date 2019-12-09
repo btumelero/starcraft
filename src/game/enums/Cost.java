@@ -26,7 +26,7 @@ public enum Cost {
   STALKER(125, 50, 2), 
   TEMPEST(250, 175, 5), 
   VOID_RAY(250, 150, 4), 
-  WRAP_PRISM(200, 0, 2), 
+  WARP_PRISM(200, 0, 2), 
   ZEALOT(100, 0, 2),
   
   //Buildings

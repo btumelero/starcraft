@@ -24,7 +24,7 @@ public enum Speed {
   STALKER(4.13),
   TEMPEST(3.15),
   VOID_RAY(3.5),
-  WRAP_PRISM(4.13),
+  WARP_PRISM(4.13),
   ZEALOT(3.15)
 
   ;

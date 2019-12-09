@@ -3,7 +3,7 @@ package game;
 /**
  * Building
  */
-public class Building {
+public class Buildings {
 
   
   

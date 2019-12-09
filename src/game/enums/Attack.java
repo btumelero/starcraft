@@ -5,6 +5,8 @@ package game.enums;
  */
 public enum Attack {
 
+  //Units
+
   ADEPT(10, 0), 
   ARCHON(25, 25),
   COLOSSUS(10, 0, 2),
@@ -16,14 +18,17 @@ public enum Attack {
   MOTHERSHIP_CORE(8, 0),
   ORACLE(15, 0),
   PHOENIX(0, 5, 2),
-  PHOTON_CANNON(20, 20),
   PROBE(6, 6),
-  PYLON(5, 0),
   SENTRY(30, 30),
   STALKER(6, 6),
   TEMPEST(40, 30),
   VOID_RAY(6, 6),
-  ZEALOT(8, 0, 2)
+  ZEALOT(8, 0, 2),
+  
+  //Buildings
+
+  PHOTON_CANNON(20, 20),
+  PYLON(5, 0),
 
   ;
 
@@ -68,4 +73,5 @@ public enum Attack {
     this(groundAttack, airAttack);
     this.numberOfAttacks = numberOfAttacks;
   }
+  
 }

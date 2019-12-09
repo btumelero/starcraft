@@ -5,6 +5,8 @@ package game.enums;
  */
 public enum Range {
 
+  //Units
+
   ADEPT(4), 
   ARCHON(3), 
   CARRIER(8), 
@@ -17,15 +19,18 @@ public enum Range {
   MOTHERSHIP_CORE(5),
   ORACLE(4),
   PHOENIX(5),
-  PHOTON_CANNON(7),
   PROBE(5),
-  PYLON(0),
   SENTRY(7),
   STALKER(5),
   TEMPEST(10, 14),
   VOID_RAY(6),
-  ZEALOT(0)
+  ZEALOT(0),
+  
+  //Buildings
 
+  PHOTON_CANNON(7),
+  PYLON(0)
+  
   ;
 
   private int groundRange;

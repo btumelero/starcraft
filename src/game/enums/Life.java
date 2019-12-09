@@ -26,7 +26,7 @@ public enum Life {
   STALKER(80, 80, 1), 
   TEMPEST(200, 100, 2), 
   VOID_RAY(150, 100),
-  WRAP_PRISM(80, 100),
+  WARP_PRISM(80, 100),
   ZEALOT(100, 50, 1),
   
   //Buildings
@@ -83,4 +83,5 @@ public enum Life {
     this(hp, shield);
     this.armor = armor;
   }
+  
 }
