@@ -5,10 +5,10 @@ package game.player;
  */
 public class Player {
   
-  public final GameObjectsMap gameObjectsMap;
+  public final GameObjectsMap gameObjects;
 
-  public Player() {
-    this.gameObjectsMap = new GameObjectsMap();
+  public Player(GameObjectsMap gameObjects) {
+    this.gameObjects = gameObjects;
   }
 
   

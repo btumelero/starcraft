@@ -5,8 +5,6 @@ package game.gameobjects;
  */
 public abstract class GameObject {
 
-  //public abstract as () {
-
-  //}
+  
 
 }
