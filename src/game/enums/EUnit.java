@@ -1,34 +1,53 @@
 package game.enums;
 
-import game.interfaces.IGameObject;
+import game.interfaces.IUnit;
+import java.util.Set;
 
 /**
  * Unit
  */
-public enum EUnit implements IGameObject {
+public enum EUnit implements IUnit {
 
+  //Ground
+  
   ADEPT, 
   ARCHON, 
-  CARRIER, 
   COLOSSUS, 
   DARK_TEMPLAR, 
   DISRUPTOR, 
   HIGH_TEMPLAR, 
   IMMORTAL, 
   INTERCEPTOR, 
+  PROBE, 
+  SENTRY, 
+  STALKER, 
+  ZEALOT,
+
+  //Air
+  
+  CARRIER, 
   MOTHERSHIP, 
   MOTHERSHIP_CORE, 
   OBSERVER, 
   ORACLE, 
   PHOENIX, 
-  PROBE, 
-  SENTRY, 
-  STALKER, 
   TEMPEST, 
   VOID_RAY, 
   WARP_PRISM, 
-  ZEALOT
-
+  
   ;
+
+  private static final Set<String> values = Set.of(EnumUtils.getStringValues(EUnit.class));
+  
+  @Override
+  public String getName() {
+    return this.name();
+  }
+
+  @Override
+  public boolean flies() {
+    return values.contains(this.name());
+  }
+  
   
 }

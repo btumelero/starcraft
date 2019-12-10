@@ -58,6 +58,7 @@ public enum ELife implements ILife {
   /**
    * @return the armor or null if it doesn't have armor
    */
+  @Override
   public Integer getArmor() {
     return armor;
   }
@@ -65,6 +66,7 @@ public enum ELife implements ILife {
   /**
    * @return the hp
    */
+  @Override
   public int getHp() {
     return hp;
   }
@@ -72,6 +74,7 @@ public enum ELife implements ILife {
   /**
    * @return the shield
    */
+  @Override
   public int getShield() {
     return shield;
   }

@@ -55,14 +55,17 @@ public enum ECost implements ICost {
   private Integer supply;
   private int minerals, gas;
 
+  @Override
   public Integer getSupply() {
     return supply;
   }
 
+  @Override
   public int getMinerals() {
     return minerals;
   }
 
+  @Override
   public int getGas() {
     return gas;
   }

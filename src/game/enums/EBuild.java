@@ -1,18 +1,18 @@
 package game.enums;
 
+import game.interfaces.IBuild;
+import game.interfaces.IGameObject;
 import java.util.List;
-
-import game.interfaces.IBuilds;
 
 /**
  * Builds
  */
-public enum EBuilds implements IBuilds {
+public enum EBuild implements IBuild {
 
   // Units
 
   CARRIER(EUnit.INTERCEPTOR),
-  // Probes builds all buildings
+  PROBE(EBuilding.values()),
 
   // Buildings
 
@@ -28,20 +28,22 @@ public enum EBuilds implements IBuilds {
 
   ;
 
-  private final List<EUnit> buildableUnits;
+  private final List<IGameObject> buildableUnits;
 
-  public boolean builds(EUnit EUnit) {
-    return buildableUnits.contains(EUnit);
+  @Override
+  public boolean builds(IGameObject gameObject) {
+    return buildableUnits.contains(gameObject);
   }
 
   /**
    * @return the buildableUnits
    */
-  public List<EUnit> getBuildableUnits() {
+  @Override
+  public List<IGameObject> getBuildableGameObjects() {
     return buildableUnits;
   }
 
-  private EBuilds(EUnit... buildableUnits) {
+  private EBuild(IGameObject... buildableUnits) {
     this.buildableUnits = List.of(buildableUnits);
   }
   

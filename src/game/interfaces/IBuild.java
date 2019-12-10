@@ -6,7 +6,7 @@ import game.enums.EUnit;
 
 /**
  * IBuilds
- */
+IBuildIBuilds */
 public interface IBuilds {
 
   public boolean builds(EUnit EUnit);

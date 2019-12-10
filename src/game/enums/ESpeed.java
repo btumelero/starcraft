@@ -31,11 +31,12 @@ public enum ESpeed implements ISpeed {
 
   ;
 
-  private double speed;
+  private final double speed;
 
   /**
    * @return the speed
    */
+  @Override
   public double getSpeed() {
     return speed;
   }

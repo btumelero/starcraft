@@ -1,6 +1,8 @@
 package game.enums;
 
 import game.interfaces.IAttack;
+import game.interfaces.IGameObject;
+import java.util.Set;
 
 /**
  * Attack
@@ -34,13 +36,21 @@ public enum EAttack implements IAttack {
 
   ;
 
+  private static Set<String> values = Set.of(EnumUtils.getStringValues(EAttack.class));
+  
   private int groundAttack, airAttack;
   private Integer numberOfAttacks;
 
+  public static boolean contains (IGameObject gameObject) {
+    return values.contains(gameObject.getName());
+  }
+  
+  @Override
   public boolean attacksAir () {
     return getAirAttack() != 0;
   }
 
+  @Override
   public boolean attacksGround () {
     return getGroundAttack() != 0;
   }
@@ -48,6 +58,7 @@ public enum EAttack implements IAttack {
   /**
    * @return the ground attack
    */
+  @Override
   public int getGroundAttack() {
     return groundAttack;
   }
@@ -55,6 +66,7 @@ public enum EAttack implements IAttack {
   /**
    * @return the air attack
    */
+  @Override
   public int getAirAttack() {
     return airAttack;
   }
@@ -62,6 +74,7 @@ public enum EAttack implements IAttack {
   /**
    * @return the numberOfAttacks
    */
+  @Override
   public Integer getNumberOfAttacks() {
     return numberOfAttacks;
   }

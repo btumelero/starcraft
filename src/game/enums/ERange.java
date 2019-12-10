@@ -40,10 +40,12 @@ public enum ERange implements IRange {
   /**
    * @return the range
    */
+  @Override
   public int getRange() {
     return groundRange;
   }
 
+  @Override
   public Integer getAirRange() {
     return airRange;
   }

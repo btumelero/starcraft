@@ -14,5 +14,5 @@ public interface IAttack {
   public int getAirAttack();
   
   public Integer getNumberOfAttacks();
-
+  
 }

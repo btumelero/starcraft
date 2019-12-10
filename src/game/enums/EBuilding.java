@@ -25,5 +25,10 @@ public enum EBuilding implements IGameObject {
   FLEET_BEACON
 
   ;
+
+  @Override
+  public String getName() {
+    return this.name();
+  }
   
 }

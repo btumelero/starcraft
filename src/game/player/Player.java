@@ -7,9 +7,8 @@ public class Player {
   
   public final GameObjectsMap gameObjects;
 
-  public Player(GameObjectsMap gameObjects) {
-    this.gameObjects = gameObjects;
+  public Player() {
+    this.gameObjects = new GameObjectsMap();
   }
-
   
 }
