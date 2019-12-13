@@ -1,16 +1,11 @@
 package com.mycompany.starcraft.game.player;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-import com.mycompany.starcraft.game.enums.EAirUnit;
-import com.mycompany.starcraft.game.enums.EBasicBuilding;
-import com.mycompany.starcraft.game.enums.ECost;
-import com.mycompany.starcraft.game.enums.EGroundUnit;
 import com.mycompany.starcraft.game.gameobjects.GameObject;
 import com.mycompany.starcraft.game.gameobjects.buildings.AdvancedBuilding;
 import com.mycompany.starcraft.game.gameobjects.buildings.BasicBuilding;
@@ -78,22 +73,6 @@ public class GameObjectsMap {
    */
   public IUnit getAsUnit(int i, IUnit type) {
     return (IUnit) get(type).get(i);
-  }
-
-  public int getMaxSupply() {
-    return (get(EBasicBuilding.NEXUS).size() * ECost.NEXUS.getSupply())
-        + (get(EBasicBuilding.PYLON).size() * ECost.PYLON.getSupply());
-  }
-
-  public int getSupplyUsage() {
-    int supplyUsage = 0;
-    List<IUnit> units = new ArrayList<>();
-    units.addAll(Arrays.asList(EAirUnit.values()));
-    units.addAll(Arrays.asList(EGroundUnit.values()));
-    for (var unit : units) {
-      supplyUsage -= ECost.valueOf(unit.getName()).getSupply();
-    }
-    return supplyUsage;
   }
 
   /**
