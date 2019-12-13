@@ -98,15 +98,15 @@ public class GameObjectsMap {
 
   /**
    * Adds the game object to the player's game objects.
-   * 
    * @param gameObject The game object to be added to the player's gameObjectsMap.
+   * @return True if the object was added to to the player's gameObjectsMap
    */
-  public void add(GameObject gameObject) {
+  public boolean add(GameObject gameObject) {
     var mapOfGameObjectClass = gameObjects.get(gameObject.getClass());
     if (mapOfGameObjectClass.containsKey(gameObject.type) == false) {
       mapOfGameObjectClass.put(gameObject.type, new ArrayList<>());
     }
-    mapOfGameObjectClass.get(gameObject.type).add(gameObject);
+    return mapOfGameObjectClass.get(gameObject.type).add(gameObject);
   }
 
   public void remove(GameObject gameObject) {

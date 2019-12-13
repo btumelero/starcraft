@@ -12,16 +12,17 @@ public class Player {
   private final GameObjectsMap gameObjects;
   private final Resources resources;
 
-  public void addToGameObjects(GameObject gameObject) {
+  public boolean addToGameObjects(GameObject gameObject) {
     ICost cost = ECost.costOf(gameObject.type);
     if (resources.hasEnoughResources(cost)) {
       if (resources.hasSuppliesAvailable(cost)) {
         resources.updateSupply(cost.getSupply());
         resources.subtractGas(cost.getGas());
         resources.subtractMinerals(cost.getMinerals());
-        gameObjects.add(gameObject);
+        return gameObjects.add(gameObject);
       }
     }
+    return false;
   }
 
   public Player() {
