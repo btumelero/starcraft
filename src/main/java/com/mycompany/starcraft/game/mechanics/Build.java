@@ -14,30 +14,30 @@ import com.mycompany.starcraft.game.interfaces.IBuild;
  *
  * @author btume
  */
-public class Build {
+public abstract class Build {
 
-  public AdvancedBuilding build(IBuild builder, EAdvancedBuilding building) {
+  public static AdvancedBuilding build(IBuild builder, EAdvancedBuilding building) {
     if (builder.builds(building)) {
       return new AdvancedBuilding(building);
     }
     return null;
   }
 
-  public BasicBuilding build(IBuild builder, EBasicBuilding building) {
+  public static BasicBuilding build(IBuild builder, EBasicBuilding building) {
     if (builder.builds(building)) {
       return new BasicBuilding(building);
     }
     return null;
   }
   
-  public AirUnit build(IBuild builder, EAirUnit building) {
+  public static AirUnit build(IBuild builder, EAirUnit building) {
     if (builder.builds(building)) {
       return new AirUnit(building);
     }
     return null;
   }
   
-  public GroundUnit build(IBuild builder, EGroundUnit building) {
+  public static GroundUnit build(IBuild builder, EGroundUnit building) {
     if (builder.builds(building)) {
       return new GroundUnit(building);
     }

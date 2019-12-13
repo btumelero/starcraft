@@ -11,21 +11,23 @@ public class Resources {
   private int supply, minerals, gas;
 
   public boolean hasEnoughResources(ICost cost) {
-    return (supply - cost.getSupply() >= 0)
-      && (minerals - cost.getMinerals() >= 0)
-      && (gas - cost.getGas() >= 0);
-  }
-  
-  public void setSupply(int supply) {
-    this.supply = supply;
+    return (minerals - cost.getMinerals() >= 0) && (gas - cost.getGas() >= 0);
   }
 
-  public void setMinerals(int minerals) {
-    this.minerals = minerals;
+  public boolean hasSuppliesAvailable(ICost cost) {
+    return supply - cost.getSupply() >= 0;
   }
 
-  public void setGas(int gas) {
-    this.gas = gas;
+  public void updateSupply(int value) {
+    this.supply += value;
+  }
+
+  public void subtractMinerals(int value) {
+    this.minerals += value;
+  }
+
+  public void subtractGas(int value) {
+    this.gas += value;
   }
 
   public int getSupply() {
@@ -38,6 +40,12 @@ public class Resources {
 
   public int getGas() {
     return gas;
+  }
+
+  public Resources(int gas, int minerals, int supply) {
+    this.gas = gas;
+    this.minerals = minerals;
+    this.supply = supply;
   }
 
 }

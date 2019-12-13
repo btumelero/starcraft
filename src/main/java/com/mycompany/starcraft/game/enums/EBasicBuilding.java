@@ -7,13 +7,13 @@ import com.mycompany.starcraft.game.interfaces.IBasicBuilding;
  */
 public enum EBasicBuilding implements IBasicBuilding {
 
-  NEXUS,
-  PYLON, 
   ASSIMILATOR,
-  GATEWAY,
-  FORGE,
   CYBERNETICS_CORE,
+  FORGE,
+  GATEWAY,
+  NEXUS,
   PHOTON_CANNON, 
+  PYLON, 
   SHIELD_BATTERY,
 
   ;

@@ -9,6 +9,10 @@ import com.mycompany.starcraft.game.interfaces.IGameObject;
  */
 public abstract class AirGameObject extends GameObject {
 
+  public void move () {
+    
+  }
+
   public AirGameObject(IGameObject gameObject) {
     super(gameObject);
   }

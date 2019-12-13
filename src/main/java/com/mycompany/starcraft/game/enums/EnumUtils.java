@@ -8,7 +8,13 @@ import java.util.stream.Stream;
  */
 abstract class EnumUtils {
   
-  static <T extends Enum<T>> String[] getStringValues(Class<T> enumClass) {
+  /**
+   * Returns a string array with the names of the given enumClass
+   * @param <T>
+   * @param enumClass The enum class to retrieve the names from
+   * @return All declared enums in the given enum class as a string array
+   */
+  static <T extends Enum<T>> String[] getNames(Class<T> enumClass) {
     return Stream.of(enumClass.getEnumConstants()).map(Enum::name).toArray(String[]::new);
   }
   

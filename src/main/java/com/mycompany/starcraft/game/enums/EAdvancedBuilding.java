@@ -8,14 +8,14 @@ import com.mycompany.starcraft.game.interfaces.IAdvancedBuilding;
  */
 public enum EAdvancedBuilding implements IAdvancedBuilding {
   
-  ROBOTICS_FACILITY,
-  WARP_GATE,
-  STARGATE,
-  TWILIGHT_COUNCIL,
-  ROBOTICS_BAY,
-  FLEET_BEACON,
-  TEMPLAR_ARCHIVES,
   DARK_SHRINE,
+  FLEET_BEACON,
+  ROBOTICS_BAY,
+  ROBOTICS_FACILITY,
+  STARGATE,
+  TEMPLAR_ARCHIVES,
+  TWILIGHT_COUNCIL,
+  WARP_GATE,
   
   ;
 
