@@ -1,7 +1,6 @@
 package com.mycompany.starcraft.game.gameobjects;
 
-import com.mycompany.starcraft.game.interfaces.IGameObject;
-
+import com.mycompany.starcraft.game.interfaces.enums.IEGameObject;
 
 /**
  *
@@ -9,7 +8,7 @@ import com.mycompany.starcraft.game.interfaces.IGameObject;
  */
 public abstract class GroundGameObject extends GameObject {
 
-  public GroundGameObject(IGameObject gameObject) {
+  public GroundGameObject(IEGameObject gameObject) {
     super(gameObject);
   }
   

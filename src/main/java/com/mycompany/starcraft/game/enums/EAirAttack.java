@@ -1,12 +1,12 @@
 package com.mycompany.starcraft.game.enums;
 
-import com.mycompany.starcraft.game.interfaces.IAirAttack;
+import com.mycompany.starcraft.game.interfaces.enums.IEAirAttack;
 
 /**
  *
  * @author btume
  */
-public enum EAirAttack implements IAirAttack {
+public enum EAirAttack implements IEAirAttack {
   
   //Units
 

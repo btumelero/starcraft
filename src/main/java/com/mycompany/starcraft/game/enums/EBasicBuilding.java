@@ -1,11 +1,11 @@
 package com.mycompany.starcraft.game.enums;
 
-import com.mycompany.starcraft.game.interfaces.IBasicBuilding;
+import com.mycompany.starcraft.game.interfaces.enums.IEBasicBuilding;
 
 /**
  * Buildings
  */
-public enum EBasicBuilding implements IBasicBuilding {
+public enum EBasicBuilding implements IEBasicBuilding {
 
   ASSIMILATOR,
   CYBERNETICS_CORE,

@@ -1,6 +1,6 @@
 package com.mycompany.starcraft.game.player;
 
-import com.mycompany.starcraft.game.interfaces.ICost;
+import com.mycompany.starcraft.game.interfaces.enums.IECost;
 
 /**
  *
@@ -10,11 +10,11 @@ public class Resources {
 
   private int supply, minerals, gas;
 
-  public boolean hasEnoughResources(ICost cost) {
+  public boolean hasEnoughResources(IECost cost) {
     return (minerals - cost.getMinerals() >= 0) && (gas - cost.getGas() >= 0);
   }
 
-  public boolean hasSuppliesAvailable(ICost cost) {
+  public boolean hasSuppliesAvailable(IECost cost) {
     return supply - cost.getSupply() >= 0;
   }
 

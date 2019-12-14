@@ -2,7 +2,7 @@ package com.mycompany.starcraft.game.player;
 
 import com.mycompany.starcraft.game.enums.ECost;
 import com.mycompany.starcraft.game.gameobjects.GameObject;
-import com.mycompany.starcraft.game.interfaces.ICost;
+import com.mycompany.starcraft.game.interfaces.enums.IECost;
 
 /**
  * Player
@@ -13,7 +13,7 @@ public class Player {
   private final Resources resources;
 
   public boolean addToGameObjects(GameObject gameObject) {
-    ICost cost = ECost.costOf(gameObject.type);
+    IECost cost = ECost.costOf(gameObject.type);
     if (resources.hasEnoughResources(cost)) {
       if (resources.hasSuppliesAvailable(cost)) {
         resources.updateSupply(cost.getSupply());

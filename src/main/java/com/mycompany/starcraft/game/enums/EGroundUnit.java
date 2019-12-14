@@ -1,12 +1,12 @@
 package com.mycompany.starcraft.game.enums;
 
-import com.mycompany.starcraft.game.interfaces.IGroundUnit;
+import com.mycompany.starcraft.game.interfaces.enums.IEGroundUnit;
 
 
 /**
  * Unit
  */
-public enum EGroundUnit implements IGroundUnit {
+public enum EGroundUnit implements IEGroundUnit {
 
   ADEPT, 
   ARCHON, 

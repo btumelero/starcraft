@@ -1,11 +1,11 @@
 package com.mycompany.starcraft.game.enums;
 
-import com.mycompany.starcraft.game.interfaces.ISpeed;
+import com.mycompany.starcraft.game.interfaces.enums.IESpeed;
 
 /**
  * Speed
  */
-public enum ESpeed implements ISpeed {
+public enum ESpeed implements IESpeed {
 
   ADEPT(3.5), 
   ARCHON(3.94),

@@ -1,11 +1,11 @@
 package com.mycompany.starcraft.game.enums;
 
-import com.mycompany.starcraft.game.interfaces.IAirUnit;
+import com.mycompany.starcraft.game.interfaces.enums.IEAirUnit;
 /**
  *
  * @author btume
  */
-public enum EAirUnit implements IAirUnit {
+public enum EAirUnit implements IEAirUnit {
 
   CARRIER, 
   MOTHERSHIP, 

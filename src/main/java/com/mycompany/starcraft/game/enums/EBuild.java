@@ -1,13 +1,13 @@
 package com.mycompany.starcraft.game.enums;
 
-import com.mycompany.starcraft.game.interfaces.IBuild;
-import com.mycompany.starcraft.game.interfaces.IGameObject;
+import com.mycompany.starcraft.game.interfaces.enums.IEBuild;
+import com.mycompany.starcraft.game.interfaces.enums.IEGameObject;
 import java.util.List;
 
 /**
  * Builds
  */
-public enum EBuild implements IBuild {
+public enum EBuild implements IEBuild {
 
   // Units
 
@@ -28,22 +28,14 @@ public enum EBuild implements IBuild {
 
   ;
 
-  private final List<IGameObject> buildableUnits;
+  private final List<IEGameObject> buildableUnits;
 
   @Override
-  public boolean builds(IGameObject gameObject) {
+  public boolean builds(IEGameObject gameObject) {
     return buildableUnits.contains(gameObject);
   }
 
-  /**
-   * @return the buildableUnits
-   */
-  @Override
-  public List<IGameObject> getBuildableGameObjects() {
-    return buildableUnits;
-  }
-
-  private EBuild(IGameObject... buildableUnits) {
+  private EBuild(IEGameObject... buildableUnits) {
     this.buildableUnits = List.of(buildableUnits);
   }
   

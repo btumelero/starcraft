@@ -8,7 +8,7 @@ import com.mycompany.starcraft.game.gameobjects.buildings.AdvancedBuilding;
 import com.mycompany.starcraft.game.gameobjects.buildings.BasicBuilding;
 import com.mycompany.starcraft.game.gameobjects.units.AirUnit;
 import com.mycompany.starcraft.game.gameobjects.units.GroundUnit;
-import com.mycompany.starcraft.game.interfaces.IBuild;
+import com.mycompany.starcraft.game.interfaces.enums.IEBuild;
 
 /**
  *
@@ -16,28 +16,28 @@ import com.mycompany.starcraft.game.interfaces.IBuild;
  */
 public abstract class Build {
 
-  public static AdvancedBuilding build(IBuild builder, EAdvancedBuilding building) {
+  public static AdvancedBuilding build(IEBuild builder, EAdvancedBuilding building) {
     if (builder.builds(building)) {
       return new AdvancedBuilding(building);
     }
     return null;
   }
 
-  public static BasicBuilding build(IBuild builder, EBasicBuilding building) {
+  public static BasicBuilding build(IEBuild builder, EBasicBuilding building) {
     if (builder.builds(building)) {
       return new BasicBuilding(building);
     }
     return null;
   }
   
-  public static AirUnit build(IBuild builder, EAirUnit building) {
+  public static AirUnit build(IEBuild builder, EAirUnit building) {
     if (builder.builds(building)) {
       return new AirUnit(building);
     }
     return null;
   }
   
-  public static GroundUnit build(IBuild builder, EGroundUnit building) {
+  public static GroundUnit build(IEBuild builder, EGroundUnit building) {
     if (builder.builds(building)) {
       return new GroundUnit(building);
     }

@@ -1,6 +1,6 @@
 package com.mycompany.starcraft.game.mechanics;
 
-import com.mycompany.starcraft.game.interfaces.ILife;
+import com.mycompany.starcraft.game.interfaces.enums.IELife;
 
 /**
  *
@@ -41,7 +41,7 @@ public class Life {
     this.shield -= value;
   }
   
-  public Life (ILife life) {
+  public Life (IELife life) {
     this.hp = life.getHp();
     this.shield = life.getShield();
   }

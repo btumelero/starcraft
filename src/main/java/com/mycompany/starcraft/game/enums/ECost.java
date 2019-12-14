@@ -1,13 +1,13 @@
 package com.mycompany.starcraft.game.enums;
 
-import com.mycompany.starcraft.game.interfaces.ICost;
-import com.mycompany.starcraft.game.interfaces.IGameObject;
+import com.mycompany.starcraft.game.interfaces.enums.IECost;
+import com.mycompany.starcraft.game.interfaces.enums.IEGameObject;
 
 
 /**
  * Supply
  */
-public enum ECost implements ICost {
+public enum ECost implements IECost {
 
   // Units
 
@@ -72,7 +72,7 @@ public enum ECost implements ICost {
     return gas;
   }
 
-  public static ICost costOf(IGameObject gameObject) {
+  public static IECost costOf(IEGameObject gameObject) {
     return valueOf(gameObject.getName());
   }
 

@@ -1,6 +1,6 @@
 package com.mycompany.starcraft.game.enums;
 
-import com.mycompany.starcraft.game.interfaces.IAttack;
+import com.mycompany.starcraft.game.interfaces.enums.IEAttack;
 
 
 /**
@@ -41,7 +41,7 @@ public enum EAttack {
    * @param attacker
    * @return the numberOfAttacks
    */
-  public static int getNumberOfAttacksOf(IAttack attacker) {
+  public static int getNumberOfAttacksOf(IEAttack attacker) {
     return EAttack.valueOf(attacker.toString()).numberOfAttacks;
   }
   

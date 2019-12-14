@@ -1,6 +1,6 @@
 package com.mycompany.starcraft.game.gameobjects;
 
-import com.mycompany.starcraft.game.interfaces.IGameObject;
+import com.mycompany.starcraft.game.interfaces.enums.IEGameObject;
 
 
 /**
@@ -9,11 +9,7 @@ import com.mycompany.starcraft.game.interfaces.IGameObject;
  */
 public abstract class AirGameObject extends GameObject {
 
-  public void move () {
-    
-  }
-
-  public AirGameObject(IGameObject gameObject) {
+  public AirGameObject(IEGameObject gameObject) {
     super(gameObject);
   }
   

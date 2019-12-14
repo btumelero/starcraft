@@ -1,12 +1,12 @@
 package com.mycompany.starcraft.game.enums;
 
-import com.mycompany.starcraft.game.interfaces.IRange;
+import com.mycompany.starcraft.game.interfaces.enums.IERange;
 
 
 /**
  * Range
  */
-public enum ERange implements IRange {
+public enum ERange implements IERange {
 
   // Units
 

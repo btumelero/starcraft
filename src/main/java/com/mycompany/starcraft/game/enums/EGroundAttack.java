@@ -1,13 +1,13 @@
 package com.mycompany.starcraft.game.enums;
 
-import com.mycompany.starcraft.game.interfaces.IGroundAttack;
+import com.mycompany.starcraft.game.interfaces.enums.IEGroundAttack;
 
 
 /**
  *
  * @author btume
  */
-public enum EGroundAttack implements IGroundAttack {
+public enum EGroundAttack implements IEGroundAttack {
   
   //Units
 

@@ -1,9 +1,9 @@
-package com.mycompany.starcraft.game.interfaces;
+package com.mycompany.starcraft.game.interfaces.enums;
 
 /**
  * ILife
  */
-public interface ILife {
+public interface IELife {
 
   public Integer getArmor();
 

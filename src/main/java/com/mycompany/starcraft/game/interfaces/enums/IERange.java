@@ -1,9 +1,9 @@
-package com.mycompany.starcraft.game.interfaces;
+package com.mycompany.starcraft.game.interfaces.enums;
 
 /**
  * IRange
  */
-public interface IRange {
+public interface IERange {
 
   public int getRange();
 

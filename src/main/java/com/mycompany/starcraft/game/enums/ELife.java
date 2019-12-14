@@ -1,12 +1,12 @@
 package com.mycompany.starcraft.game.enums;
 
-import com.mycompany.starcraft.game.interfaces.ILife;
+import com.mycompany.starcraft.game.interfaces.enums.IELife;
 
 
 /**
  * Armor
  */
-public enum ELife implements ILife {
+public enum ELife implements IELife {
 
   // Units
 

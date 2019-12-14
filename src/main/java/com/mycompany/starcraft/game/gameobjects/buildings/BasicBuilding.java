@@ -1,7 +1,7 @@
 package com.mycompany.starcraft.game.gameobjects.buildings;
 
 import com.mycompany.starcraft.game.gameobjects.GroundGameObject;
-import com.mycompany.starcraft.game.interfaces.IBuilding;
+import com.mycompany.starcraft.game.interfaces.enums.IEBuilding;
 
 /**
  *
@@ -9,7 +9,7 @@ import com.mycompany.starcraft.game.interfaces.IBuilding;
  */
 public class BasicBuilding extends GroundGameObject {
 
-  public BasicBuilding(IBuilding building) {
+  public BasicBuilding(IEBuilding building) {
     super(building);
   }
   

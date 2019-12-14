@@ -11,14 +11,14 @@ import com.mycompany.starcraft.game.gameobjects.buildings.AdvancedBuilding;
 import com.mycompany.starcraft.game.gameobjects.buildings.BasicBuilding;
 import com.mycompany.starcraft.game.gameobjects.units.AirUnit;
 import com.mycompany.starcraft.game.gameobjects.units.GroundUnit;
-import com.mycompany.starcraft.game.interfaces.IBuilding;
-import com.mycompany.starcraft.game.interfaces.IGameObject;
-import com.mycompany.starcraft.game.interfaces.IUnit;
+import com.mycompany.starcraft.game.interfaces.enums.IEBuilding;
+import com.mycompany.starcraft.game.interfaces.enums.IEGameObject;
+import com.mycompany.starcraft.game.interfaces.enums.IEUnit;
 
 /**
  * GameObjectsMap:
  * 
- * Composite key map that stores the player's objects. It work as follows:
+ * Composite key HashMap that stores the player's objects. It work as follows:
  * 
  * ______________________________________________________________________
  * |PRIMARY KEY.....|SECONDARY KEY|VALUE................................|
@@ -38,7 +38,7 @@ import com.mycompany.starcraft.game.interfaces.IUnit;
 public class GameObjectsMap {
 
   @SuppressWarnings("rawtypes")
-  private final Map<Class, Map<IGameObject, List<GameObject>>> gameObjects;
+  private final Map<Class, Map<IEGameObject, List<GameObject>>> gameObjects;
 
   /**
    * Returns a list with all game objects of the specified type.
@@ -48,8 +48,13 @@ public class GameObjectsMap {
    *             EAdvancedBuilding, EAirUnit or EGroundUnit.
    * @return The List of the speciefied type.
    */
-  public List<? extends GameObject> get(IGameObject type) {
-    return gameObjects.get(type.getClass()).get(type);
+  public List<GameObject> get(IEGameObject type) {
+    return getInternalMap(type.getClass()).get(type);
+  }
+
+  @SuppressWarnings("rawtypes")
+  private Map<IEGameObject, List<GameObject>> getInternalMap(Class gameObjectClass) {
+    return gameObjects.get(gameObjectClass);
   }
 
   /**
@@ -60,8 +65,8 @@ public class GameObjectsMap {
    *             EAdvancedBuild enums must be used here.
    * @return A game object already cast to IBuilding.
    */
-  public IBuilding getAsBuilding(int i, IBuilding type) {
-    return (IBuilding) get(type).get(i);
+  public IEBuilding getAsBuilding(int i, IEBuilding type) {
+    return (IEBuilding) get(type).get(i);
   }
 
   /**
@@ -71,28 +76,45 @@ public class GameObjectsMap {
    * @param type The type of the unit to be returned.
    * @returnA game object already cast to IUnit.
    */
-  public IUnit getAsUnit(int i, IUnit type) {
-    return (IUnit) get(type).get(i);
+  public IEUnit getAsUnit(int i, IEUnit type) {
+    return (IEUnit) get(type).get(i);
   }
 
   /**
    * Adds the game object to the player's game objects.
+   * 
    * @param gameObject The game object to be added to the player's gameObjectsMap.
-   * @return True if the object was added to to the player's gameObjectsMap
+   * @return True if the object was added to the player's gameObjectsMap
    */
   public boolean add(GameObject gameObject) {
-    var mapOfGameObjectClass = gameObjects.get(gameObject.getClass());
-    if (mapOfGameObjectClass.containsKey(gameObject.type) == false) {
-      mapOfGameObjectClass.put(gameObject.type, new ArrayList<>());
+    if (keyExists(gameObject.type) == false) {
+      getInternalMap(gameObject.type.getClass()).put(gameObject.type, new ArrayList<>());
     }
-    return mapOfGameObjectClass.get(gameObject.type).add(gameObject);
+    return get(gameObject.type).add(gameObject);
   }
 
-  public void remove(GameObject gameObject) {
-    var mapOfGameObjectClass = gameObjects.get(gameObject.getClass());
-    if (mapOfGameObjectClass.containsKey(gameObject.type)) {
-      mapOfGameObjectClass.get(gameObject.type).remove(gameObject);
+  /**
+   * Removes the game object from the player's game objects
+   * 
+   * @param gameObject The game object to be removed from the player's
+   *                   gameObjectsMap
+   * @return True if the object was removed from the player's gameObjectsMap
+   */
+  public boolean remove(GameObject gameObject) {
+    if (keyExists(gameObject.type)) {
+      return get(gameObject.type).remove(gameObject);
     }
+    return false;
+  }
+
+  /**
+   * Returns true if the player's gameObjectsMap contains the specified key
+   * 
+   * @param gameObject The key to be checked
+   * @return True if the gameObjectsMap contains the specified key
+   */
+  public boolean keyExists(IEGameObject gameObject) {
+    return gameObjects.get(gameObject.getClass()).containsKey(gameObject);
   }
 
   @SuppressWarnings("rawtypes")

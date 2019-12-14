@@ -4,7 +4,7 @@ Projeto da disciplina Laboratório de Programação Orientada a Objetos I (Da qu
 
 Legenda das nomenclaturas das classes:
 
-Interfaces têm seu nome precedido por "I"
+Interfaces têm o nome de quem a implementa precedido por "I"
 
 Enums têm seu nome precedido por "E"
 
