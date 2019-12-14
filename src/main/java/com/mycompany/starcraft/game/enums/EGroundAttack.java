@@ -4,7 +4,8 @@ import com.mycompany.starcraft.game.interfaces.enums.IEGroundAttack;
 
 
 /**
- *
+ * Contains all Ground Attack values
+ * 
  * @author btume
  */
 public enum EGroundAttack implements IEGroundAttack {
@@ -51,7 +52,7 @@ public enum EGroundAttack implements IEGroundAttack {
 
   @Override
   public int getNumberOfAttacks() {
-    return EAttack.getNumberOfAttacksOf(this);
+    return ENumberOfAttacks.getNumberOfAttacksOf(this);
   }
   
   

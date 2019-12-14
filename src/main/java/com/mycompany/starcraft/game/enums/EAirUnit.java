@@ -1,8 +1,10 @@
 package com.mycompany.starcraft.game.enums;
 
 import com.mycompany.starcraft.game.interfaces.enums.IEAirUnit;
+
 /**
- *
+ * Contains all Air Units
+ * 
  * @author btume
  */
 public enum EAirUnit implements IEAirUnit {

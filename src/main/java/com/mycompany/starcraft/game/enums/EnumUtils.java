@@ -3,7 +3,8 @@ package com.mycompany.starcraft.game.enums;
 import java.util.stream.Stream;
 
 /**
- *
+ * Useful methods
+ * 
  * @author btume
  */
 abstract class EnumUtils {

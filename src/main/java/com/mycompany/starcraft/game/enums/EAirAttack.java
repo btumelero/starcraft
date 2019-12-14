@@ -3,7 +3,8 @@ package com.mycompany.starcraft.game.enums;
 import com.mycompany.starcraft.game.interfaces.enums.IEAirAttack;
 
 /**
- *
+ * Contains all Air Attack values
+ * 
  * @author btume
  */
 public enum EAirAttack implements IEAirAttack {
@@ -39,7 +40,7 @@ public enum EAirAttack implements IEAirAttack {
 
   @Override
   public int getNumberOfAttacks() {
-    return EAttack.getNumberOfAttacksOf(this);
+    return ENumberOfAttacks.getNumberOfAttacksOf(this);
   }
   
   private EAirAttack(int airAttack) {

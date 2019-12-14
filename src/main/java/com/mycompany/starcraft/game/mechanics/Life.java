@@ -41,6 +41,10 @@ public class Life {
     this.shield -= value;
   }
   
+  /**
+   * Instantiate directly only in test cases where it is not necessary to initialize the entire object correctly
+   * @param life Use ELife here
+   */
   public Life (IELife life) {
     this.hp = life.getHp();
     this.shield = life.getShield();

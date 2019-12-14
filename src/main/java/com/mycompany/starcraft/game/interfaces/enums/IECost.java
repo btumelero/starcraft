@@ -1,7 +1,8 @@
 package com.mycompany.starcraft.game.interfaces.enums;
 
 /**
- * ICost
+ *
+ * @author btume
  */
 public interface IECost {
 

@@ -42,6 +42,12 @@ public class Resources {
     return gas;
   }
 
+  /**
+   * Instantiate directly only in test cases where it is not necessary to initialize the entire object correctly
+   * @param gas Use positive values
+   * @param minerals Use positive values
+   * @param supply Use positive values
+   */
   public Resources(int gas, int minerals, int supply) {
     this.gas = gas;
     this.minerals = minerals;

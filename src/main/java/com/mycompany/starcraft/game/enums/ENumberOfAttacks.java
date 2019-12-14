@@ -4,9 +4,11 @@ import com.mycompany.starcraft.game.interfaces.enums.IEAttack;
 
 
 /**
- * Attack
+ * Contains all number of attacks values
+ * 
+ * @author btume
  */
-public enum EAttack {
+public enum ENumberOfAttacks {
 
   //Units
 
@@ -42,10 +44,10 @@ public enum EAttack {
    * @return the numberOfAttacks
    */
   public static int getNumberOfAttacksOf(IEAttack attacker) {
-    return EAttack.valueOf(attacker.toString()).numberOfAttacks;
+    return ENumberOfAttacks.valueOf(attacker.toString()).numberOfAttacks;
   }
   
-  private EAttack(int numberOfAttacks){
+  private ENumberOfAttacks(int numberOfAttacks){
     this.numberOfAttacks = numberOfAttacks;
   }
 

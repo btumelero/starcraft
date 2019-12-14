@@ -7,7 +7,8 @@ import com.mycompany.starcraft.game.interfaces.enums.IELife;
 
 
 /**
- * IGameObjects
+ *
+ * @author btume
  */
 public interface IEGameObject {
   

@@ -5,7 +5,9 @@ import com.mycompany.starcraft.game.interfaces.enums.IEGameObject;
 
 
 /**
- * Supply
+ * Contains all gas, minerals and supply Costs. Positive supply values means extra capacity and negative values means capacity usage
+ * 
+ * @author btume
  */
 public enum ECost implements IECost {
 

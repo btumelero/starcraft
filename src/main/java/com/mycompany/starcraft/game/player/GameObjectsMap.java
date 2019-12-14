@@ -34,6 +34,8 @@ import com.mycompany.starcraft.game.interfaces.enums.IEUnit;
  * |GroundUnit......|ADEPT........|List of Adepts.......................|
  * |................|.............|.....................................|
  * |____________________________________________________________________|
+ * 
+ * @author btume
  */
 public class GameObjectsMap {
 
@@ -122,6 +124,9 @@ public class GameObjectsMap {
     return Set.copyOf(gameObjects.keySet());
   }
 
+  /**
+   * Instantiate directly only in test cases where it is not necessary to initialize the entire object correctly
+   */
   public GameObjectsMap() {
     this.gameObjects = new HashMap<>();
     this.gameObjects.put(AdvancedBuilding.class, new HashMap<>());

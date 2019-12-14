@@ -4,7 +4,9 @@ import com.mycompany.starcraft.game.interfaces.enums.IERange;
 
 
 /**
- * Range
+ * Contains all Range values
+ * 
+ * @author btume
  */
 public enum ERange implements IERange {
 

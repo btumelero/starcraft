@@ -3,7 +3,8 @@ package com.mycompany.starcraft.game.interfaces.enums;
 import com.mycompany.starcraft.game.interfaces.enums.IEGameObject;
 
 /**
- * IBuilds
+ *
+ * @author btume
  */
 public interface IEBuild {
 

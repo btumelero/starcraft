@@ -3,7 +3,9 @@ package com.mycompany.starcraft.game.enums;
 import com.mycompany.starcraft.game.interfaces.enums.IEBasicBuilding;
 
 /**
- * Buildings
+ * Contains all Basic Buildings
+ * 
+ * @author btume
  */
 public enum EBasicBuilding implements IEBasicBuilding {
 

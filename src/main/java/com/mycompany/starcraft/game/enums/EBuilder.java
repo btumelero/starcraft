@@ -5,9 +5,11 @@ import com.mycompany.starcraft.game.interfaces.enums.IEGameObject;
 import java.util.List;
 
 /**
- * Builds
+ * Contains all Builders and its buildable game objects
+ * 
+ * @author btume
  */
-public enum EBuild implements IEBuild {
+public enum EBuilder implements IEBuild {
 
   // Units
 
@@ -28,15 +30,15 @@ public enum EBuild implements IEBuild {
 
   ;
 
-  private final List<IEGameObject> buildableUnits;
+  private final List<IEGameObject> buildableGameObjects;
 
   @Override
   public boolean builds(IEGameObject gameObject) {
-    return buildableUnits.contains(gameObject);
+    return buildableGameObjects.contains(gameObject);
   }
 
-  private EBuild(IEGameObject... buildableUnits) {
-    this.buildableUnits = List.of(buildableUnits);
+  private EBuilder(IEGameObject... buildableUnits) {
+    this.buildableGameObjects = List.of(buildableUnits);
   }
   
 }

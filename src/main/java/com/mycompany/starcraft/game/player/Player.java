@@ -5,7 +5,8 @@ import com.mycompany.starcraft.game.gameobjects.GameObject;
 import com.mycompany.starcraft.game.interfaces.enums.IECost;
 
 /**
- * Player
+ * 
+ * @author btume
  */
 public class Player {
   
@@ -25,6 +26,9 @@ public class Player {
     return false;
   }
 
+  /**
+   * Instantiate directly only in test cases where it is not necessary to initialize the entire object correctly
+   */
   public Player() {
     this.gameObjects = new GameObjectsMap();
     this.resources = new Resources(300,300, 20);

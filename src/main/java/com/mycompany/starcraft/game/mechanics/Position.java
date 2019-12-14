@@ -1,7 +1,8 @@
 package com.mycompany.starcraft.game.mechanics;
 
 /**
- * Position
+ *
+ * @author btume
  */
 public class Position {
 
@@ -19,19 +20,23 @@ public class Position {
     this.x = x;
   }
 
-  public static Position Istantiate(int x, int y) {
-    return isValid(x, y) ? new Position(x, y) : null;
-  }
-
-  private static boolean isValid(int x, int y) {
+  public static boolean isValid(int x, int y) {
     return false;
   }
 
-  private Position(int x, int y) {
+  /**
+   * Instantiate directly only in test cases where it is not necessary to initialize the entire object correctly
+   * @param x Use values within map bounds
+   * @param y Use values within map bounds
+   */
+  public Position(int x, int y) {
     this.x = x;
     this.y = y;
   }
 
+  /**
+   * Instantiate directly only in test cases where it is not necessary to initialize the entire object correctly.
+   */
   public Position() {
 
   }

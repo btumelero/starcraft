@@ -1,11 +1,11 @@
 package com.mycompany.starcraft.game.interfaces.enums;
 
 /**
- *
+ * 
  * @author btume
  */
-public interface IEAttack {
+public interface IEArmoredLife extends IELife {
 
-  public int getNumberOfAttacks();
+  public int getArmor();
   
 }

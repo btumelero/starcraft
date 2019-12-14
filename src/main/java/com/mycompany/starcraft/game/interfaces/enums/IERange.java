@@ -1,7 +1,8 @@
 package com.mycompany.starcraft.game.interfaces.enums;
 
 /**
- * IRange
+ *
+ * @author btume
  */
 public interface IERange {
 

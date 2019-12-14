@@ -4,7 +4,9 @@ import com.mycompany.starcraft.game.interfaces.enums.IEGroundUnit;
 
 
 /**
- * Unit
+ * Contains all Ground Units
+ * 
+ * @author btume
  */
 public enum EGroundUnit implements IEGroundUnit {
 

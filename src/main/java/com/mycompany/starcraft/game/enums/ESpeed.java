@@ -3,7 +3,9 @@ package com.mycompany.starcraft.game.enums;
 import com.mycompany.starcraft.game.interfaces.enums.IESpeed;
 
 /**
- * Speed
+ * Contains all Speed values
+ * 
+ * @author btume
  */
 public enum ESpeed implements IESpeed {
 

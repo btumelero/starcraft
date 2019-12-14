@@ -1,7 +1,8 @@
 package com.mycompany.starcraft.game.interfaces.enums;
 
 /**
- * ISpeed
+ *
+ * @author btume
  */
 public interface IESpeed {
 

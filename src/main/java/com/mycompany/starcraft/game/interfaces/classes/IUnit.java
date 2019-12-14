@@ -1,7 +1,8 @@
 package com.mycompany.starcraft.game.interfaces.classes;
 
 /**
- * IUnit
+ *
+ * @author btume
  */
 public interface IUnit {
 

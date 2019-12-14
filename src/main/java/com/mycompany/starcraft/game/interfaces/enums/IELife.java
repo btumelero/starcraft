@@ -1,11 +1,10 @@
 package com.mycompany.starcraft.game.interfaces.enums;
 
 /**
- * ILife
+ *
+ * @author btume
  */
 public interface IELife {
-
-  public Integer getArmor();
 
   public int getHp();
 
