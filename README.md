@@ -1,6 +1,6 @@
 # starcraft
 
-Projeto da disciplina Laboratório de Programação Orientada a Objetos I (Da qual era Monitor no 6º semestre, msa não fiz parte por já ter cursado ela). Feito após a conclusão do curso
+Projeto da disciplina Laboratório de Programação Orientada a Objetos I (Da qual era Monitor no 6º semestre, mas não fiz parte por já ter cursado ela). Feito após a conclusão do curso
 
 Legenda das nomenclaturas das classes:
 
