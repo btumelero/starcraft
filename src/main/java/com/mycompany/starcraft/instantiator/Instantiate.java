@@ -6,11 +6,9 @@ import com.mycompany.starcraft.game.gameobjects.units.AirUnit;
 import com.mycompany.starcraft.game.gameobjects.units.GroundUnit;
 import com.mycompany.starcraft.game.interfaces.enums.IEAdvancedBuilding;
 import com.mycompany.starcraft.game.interfaces.enums.IEAirUnit;
-import com.mycompany.starcraft.game.interfaces.enums.IEArmoredLife;
 import com.mycompany.starcraft.game.interfaces.enums.IEBasicBuilding;
 import com.mycompany.starcraft.game.interfaces.enums.IEGroundUnit;
 import com.mycompany.starcraft.game.interfaces.enums.IELife;
-import com.mycompany.starcraft.game.mechanics.ArmoredLife;
 import com.mycompany.starcraft.game.mechanics.Life;
 import com.mycompany.starcraft.game.mechanics.Position;
 import com.mycompany.starcraft.game.player.GameObjectsMap;
@@ -56,15 +54,6 @@ public abstract class Instantiate {
    */
   public static GroundUnit groundUnit(IEGroundUnit groundUnit) {
     return groundUnit != null ? new GroundUnit(groundUnit) : null;
-  }
-
-  /**
-   * Returns an ArmoredLife of the given type or null
-   * @param armoredLife Use EArmoredLife to choose an ArmoredLife
-   * @return An ArmoredLife if the given argument(s) is(are) valid (not null)
-   */
-  public static ArmoredLife armoredLife(IEArmoredLife armoredLife) {
-    return armoredLife != null ? new ArmoredLife(armoredLife) : null;
   }
 
   /**

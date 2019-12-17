@@ -3,6 +3,7 @@ package com.mycompany.starcraft.game.player;
 import com.mycompany.starcraft.game.enums.ECost;
 import com.mycompany.starcraft.game.gameobjects.GameObject;
 import com.mycompany.starcraft.game.interfaces.enums.IECost;
+import com.mycompany.starcraft.instantiator.Instantiate;
 
 /**
  * 
@@ -30,8 +31,8 @@ public class Player {
    * Instantiate directly only in test cases where it is not necessary to initialize the entire object correctly
    */
   public Player() {
-    this.gameObjects = new GameObjectsMap();
-    this.resources = new Resources(300,300, 20);
+    this.gameObjects = Instantiate.gameObjectsMap();
+    this.resources = Instantiate.resources(0, 50, 12);
   }
   
 }

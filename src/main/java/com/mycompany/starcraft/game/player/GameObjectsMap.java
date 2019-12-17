@@ -6,14 +6,15 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+import com.mycompany.starcraft.game.enums.EAdvancedBuilding;
+import com.mycompany.starcraft.game.enums.EAirUnit;
+import com.mycompany.starcraft.game.enums.EBasicBuilding;
+import com.mycompany.starcraft.game.enums.EGroundUnit;
 import com.mycompany.starcraft.game.gameobjects.GameObject;
-import com.mycompany.starcraft.game.gameobjects.buildings.AdvancedBuilding;
-import com.mycompany.starcraft.game.gameobjects.buildings.BasicBuilding;
-import com.mycompany.starcraft.game.gameobjects.units.AirUnit;
-import com.mycompany.starcraft.game.gameobjects.units.GroundUnit;
 import com.mycompany.starcraft.game.interfaces.enums.IEBuilding;
 import com.mycompany.starcraft.game.interfaces.enums.IEGameObject;
 import com.mycompany.starcraft.game.interfaces.enums.IEUnit;
+import com.mycompany.starcraft.instantiator.Instantiate;
 
 /**
  * GameObjectsMap:
@@ -116,7 +117,7 @@ public class GameObjectsMap {
    * @return True if the gameObjectsMap contains the specified key
    */
   public boolean keyExists(IEGameObject gameObject) {
-    return gameObjects.get(gameObject.getClass()).containsKey(gameObject);
+    return getInternalMap(gameObject.getClass()).containsKey(gameObject);
   }
 
   @SuppressWarnings("rawtypes")
@@ -129,9 +130,13 @@ public class GameObjectsMap {
    */
   public GameObjectsMap() {
     this.gameObjects = new HashMap<>();
-    this.gameObjects.put(AdvancedBuilding.class, new HashMap<>());
-    this.gameObjects.put(BasicBuilding.class, new HashMap<>());
-    this.gameObjects.put(AirUnit.class, new HashMap<>());
-    this.gameObjects.put(GroundUnit.class, new HashMap<>());
+    this.gameObjects.put(EAdvancedBuilding.class, new HashMap<>());
+    this.gameObjects.put(EBasicBuilding.class, new HashMap<>());
+    this.gameObjects.put(EAirUnit.class, new HashMap<>());
+    this.gameObjects.put(EGroundUnit.class, new HashMap<>());
+    add(Instantiate.basicBuilding(EBasicBuilding.NEXUS));
+    for (int i = 0; i < 12; i++) {
+      add(Instantiate.groundUnit(EGroundUnit.PROBE));
+    }
   }
 }

@@ -8,7 +8,7 @@ import com.mycompany.starcraft.game.interfaces.enums.IELife;
  */
 public class Life {
   
-  protected int hp, shield;
+  protected int hp, shield, armor;
 
   public int getHp() {
     return hp;
@@ -16,6 +16,13 @@ public class Life {
 
   public int getShield() {
     return shield;
+  }
+
+  /**
+   * @return the armor
+   */
+  public int getArmor() {
+    return armor;
   }
 
   /**
@@ -34,7 +41,7 @@ public class Life {
   }
   
   protected void subtractFromHp (int value) {
-    this.hp -= value;
+    this.hp -= Math.abs(value - armor);
   }
   
   private void subtractFromShield (int value) {
@@ -48,5 +55,7 @@ public class Life {
   public Life (IELife life) {
     this.hp = life.getHp();
     this.shield = life.getShield();
+    this.armor = life.getArmor();
   }
+  
 }
