@@ -4,6 +4,20 @@
          "type": "java",
          "name": "CodeLens (Launch) - Main",
          "request": "launch",
+         "mainClass": "com.mycompany.starcraft.app.Main",
+         "projectName": "Starcraft"
+      },
+      {
+         "type": "java",
+         "name": "CodeLens (Launch) - ShootingMissilesEx",
+         "request": "launch",
+         "mainClass": "com.mycompany.starcraft.app.ShootingMissilesEx",
+         "projectName": "Starcraft"
+      },
+      {
+         "type": "java",
+         "name": "CodeLens (Launch) - Main",
+         "request": "launch",
          "mainClass": "com.mycompany.starcraft.main.Main",
          "projectName": "Starcraft"
       }

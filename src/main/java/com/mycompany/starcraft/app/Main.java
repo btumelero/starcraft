@@ -1,4 +1,4 @@
-package com.mycompany.starcraft.main;
+package com.mycompany.starcraft.app;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,7 +23,6 @@ public class Main {
     System.out.println("Number of players?");
     startGame(scan.nextInt());
     scan.close();
-
   }
 
   private static void startGame(int numberOfPlayers) {
